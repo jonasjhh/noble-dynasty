@@ -13,24 +13,24 @@ describe('App Component', () => {
     expect(title).toBeInTheDocument();
   });
 
-  it('should display the game tagline', () => {
+  it('should display multiplayer lobby description', () => {
     render(<App />);
-    const tagline = screen.getByText(
-      /Command houses. Manipulate the court. Deceive your rivals. Rule the city. Forge your dynasty./i
+    const description = screen.getByText(
+      /A strategic multiplayer game of political intrigue and worker placement/i
     );
-    expect(tagline).toBeInTheDocument();
+    expect(description).toBeInTheDocument();
   });
 
-  it('should display start game button', () => {
+  it('should display create new game button', () => {
     render(<App />);
-    const button = screen.getByRole('button', { name: /Start Game/i });
+    const button = screen.getByRole('button', { name: /Create New Game/i });
     expect(button).toBeInTheDocument();
   });
 
-  it('should display player count selector', () => {
+  it('should display join existing game button', () => {
     render(<App />);
-    const select = screen.getByLabelText(/Number of Players/i);
-    expect(select).toBeInTheDocument();
+    const button = screen.getByRole('button', { name: /Join Existing Game/i });
+    expect(button).toBeInTheDocument();
   });
 
   it('should have the correct CSS classes', () => {

@@ -220,7 +220,9 @@ export class GameEngine {
         if (LOCATIONS.thieves_guild) {
           LOCATIONS.thieves_guild.closed = true;
         }
-        this.log('All players lose 1 political influence. Thieves Guild closed.');
+        this.log(
+          'All players lose 1 political influence. Thieves Guild closed.'
+        );
         break;
       case 'censorship':
         if (LOCATIONS.printing_press) {

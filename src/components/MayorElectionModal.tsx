@@ -24,15 +24,19 @@ export function MayorElectionModal({
   return (
     <div className="modal" style={{ display: 'block' }}>
       <div className="modal-content">
-        <h2 className="modal-title">
-          Mayor Election - Round {currentRound}
-        </h2>
+        <h2 className="modal-title">Mayor Election - Round {currentRound}</h2>
 
         {!showResults && (
           <>
             <div className="voting-section">
               <h3>{currentVoter.name} is Voting</h3>
-              <div style={{ marginBottom: '15px', fontSize: '0.9rem', color: '#cd853f' }}>
+              <div
+                style={{
+                  marginBottom: '15px',
+                  fontSize: '0.9rem',
+                  color: '#cd853f',
+                }}
+              >
                 Voting Power: {currentVoter.political_influence} influence
               </div>
               <div className="vote-buttons">
@@ -59,7 +63,9 @@ export function MayorElectionModal({
                       {result?.voters && result.voters.length > 0 && (
                         <>
                           <br />
-                          <span style={{ fontSize: '0.8rem', color: '#cd853f' }}>
+                          <span
+                            style={{ fontSize: '0.8rem', color: '#cd853f' }}
+                          >
                             Voted by: {result.voters.join(', ')}
                           </span>
                         </>

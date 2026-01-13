@@ -78,7 +78,8 @@ export function applyStartingChoice(
   return {
     ...player,
     gold: player.gold + rewards.gold,
-    political_influence: player.political_influence + rewards.political_influence,
+    political_influence:
+      player.political_influence + rewards.political_influence,
     buildings: rewards.buildings
       ? [...player.buildings, ...rewards.buildings]
       : player.buildings,
@@ -95,7 +96,10 @@ export function applyStartingChoice(
 /**
  * Format player name with role
  */
-export function formatPlayerName(player: Player, roleNames?: Record<string, string>): string {
+export function formatPlayerName(
+  player: Player,
+  roleNames?: Record<string, string>
+): string {
   if (!player.role || !roleNames) {
     return player.name;
   }

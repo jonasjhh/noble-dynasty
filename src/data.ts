@@ -1,5 +1,12 @@
 // Game data from legacy implementation
-import type { Role, Location, Policy, GoodsType, Building, StartingChoice } from './types';
+import type {
+  Role,
+  Location,
+  Policy,
+  GoodsType,
+  Building,
+  StartingChoice,
+} from './types';
 
 export const ROLES: Record<string, Role> = {
   mayor: {
@@ -36,7 +43,8 @@ export const ROLES: Record<string, Role> = {
 export const LOCATIONS: Record<string, Location> = {
   city_hall: {
     name: 'City Hall',
-    description: 'Lobby to adjust political influence (±1 per servant, 1 gold cost)',
+    description:
+      'Lobby to adjust political influence (±1 per servant, 1 gold cost)',
     closed: false,
   },
   thieves_guild: {
@@ -156,7 +164,8 @@ export const BUILDINGS: Record<string, Building> = {
   spy_network: {
     name: 'Spy Network',
     cost: 11,
-    description: "Place servant to peek at another player's banked VPs or cards",
+    description:
+      "Place servant to peek at another player's banked VPs or cards",
   },
 };
 
@@ -177,7 +186,7 @@ export const STARTING_CHOICES: StartingChoice[] = [
     rewards: { gold: 2, political_influence: 1, buildings: ['guardhouse'] },
   },
   {
-    name: 'Scholar\'s Path',
+    name: "Scholar's Path",
     description: 'Knowledge is power',
     rewards: { gold: 1, political_influence: 0, buildings: ['library'] },
   },

@@ -51,7 +51,8 @@ export function GameBoard({
 
         <div className="location">
           <div className="location-name">
-            Current Policy: {currentPolicy ? POLICIES[currentPolicy]?.name : 'None'}
+            Current Policy:{' '}
+            {currentPolicy ? POLICIES[currentPolicy]?.name : 'None'}
           </div>
           <div>
             {currentPolicy
